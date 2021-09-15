@@ -4,8 +4,34 @@ Given N X N matrix filled with 1, 0, 2, 3. Find whether there is a path possible
 A value of cell 1 means Source.
 A value of cell 2 means Destination.
 A value of cell 3 means Blank cell.
-A value of cell 0 means Blank Wall.
+A value of cell 0 means Blank Wall (Blocked cell).
 Note: there are an only a single source and single destination(sink).
+
+Input:
+
+{ 0, 3, 2 }, 
+{ 3, 3, 0 }, 
+{ 1, 3, 0 }; 
+
+Output: True
+
+Input: 
+
+{ 0, 3, 1, 0 }, 
+{ 3, 0, 3, 3 }, 
+{ 2, 3, 0, 3 }, 
+{ 0, 3, 3, 3 }
+
+Output: True
+
+Input:
+
+{ 0, 3, 1, 0 }, 
+{ 3, 0, 3, 3 }, 
+{ 2, 0, 0, 3 }, 
+{ 0, 3, 3, 3 }
+
+Output: False
 """
 from collections import deque
 def valid_path(matrix):
